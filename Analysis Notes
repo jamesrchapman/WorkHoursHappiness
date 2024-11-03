@@ -1,0 +1,138 @@
+Key Findings:
+Work Hours and Happiness Levels:
+
+The coefficients for WorkHours are negative for both transitions (moving from happiness=1 to 2 and happiness=1 to 3), suggesting that increased work hours are associated with lower levels of happiness (moving towards the higher end of the happiness scale, where 3 indicates less happiness).
+For happiness=2: The coefficient is -0.0087 with a p-value of 0.075 (marginally non-significant, though close to the 0.05 threshold).
+For happiness=3: The coefficient is -0.0127 with a p-value of 0.049, indicating a statistically significant association at the 0.05 level. This means that, for those reporting very low happiness (happiness=3), higher work hours significantly predict their category placement.
+Intercepts:
+
+The intercepts give thresholds for each happiness level in the model. These values are mainly reference points and less critical for interpretation here, as they help set the baseline probabilities for each level.
+Model Fit and Pseudo R-squared:
+
+The pseudo R-squared of 0.001867 indicates that work hours explain only a very small fraction of the variance in happiness. While statistically significant, the effect of work hours on happiness isn’t particularly strong.
+Overall Significance:
+
+The LLR p-value of 0.093 suggests that the model overall is only marginally significant. While work hours are a statistically relevant predictor for the most unhappy category (happiness=3), they may not be the dominant factor driving happiness levels.
+Interpretation:
+In summary, while higher work hours are associated with a small, statistically significant decrease in happiness, the effect size is minimal, and work hours alone don’t account for much of the variance in happiness levels. This suggests that other factors, such as social support, income, or job satisfaction, may play a larger role in determining happiness.
+
+
+
+
+
+
+OUTPUT:
+
+
+   Ballot  WorkHours  happiness  Year  ID
+0    -100       -100          3  1972   1
+1    -100       -100          3  1972   2
+2    -100       -100          2  1972   3
+3    -100       -100          3  1972   4
+4    -100       -100          2  1972   5
+      Ballot  WorkHours  happiness  Year   ID
+1692    -100         40          2  1973   80
+1736    -100         40          2  1973  124
+1776    -100         55          2  1973  164
+1784    -100         40          2  1973  172
+1823    -100         40          1  1973  211
+WorkHours
+0     2.000000
+1     2.000000
+2     2.000000
+3     2.000000
+4     1.250000
+5     1.625000
+6     2.000000
+7     2.000000
+8     1.555556
+9     2.000000
+10    1.687500
+11    2.500000
+12    1.900000
+13    1.000000
+15    2.095238
+16    2.500000
+17    2.000000
+18    2.200000
+20    2.000000
+21    1.750000
+22    2.000000
+23    2.000000
+24    2.062500
+25    2.000000
+26    2.000000
+27    1.000000
+28    2.333333
+30    1.903846
+32    2.045455
+33    2.000000
+34    1.666667
+35    1.911111
+36    1.875000
+37    2.142857
+38    2.000000
+39    2.000000
+40    1.927690
+41    2.333333
+42    2.250000
+43    1.800000
+44    1.888889
+45    1.833333
+46    1.750000
+47    1.800000
+48    1.913043
+50    1.764151
+52    1.200000
+55    1.857143
+56    1.600000
+58    2.000000
+60    1.672727
+65    1.500000
+66    2.000000
+68    2.000000
+70    1.736842
+72    1.000000
+75    1.333333
+80    2.000000
+84    2.000000
+89    2.250000
+Name: happiness, dtype: float64
+Correlation between work hours and happiness: -0.05848601280920512
+WorkHoursCategory
+Low          1.903448
+Medium       1.934949
+High         1.791798
+Very High    1.704545
+Name: happiness, dtype: float64
+happiness
+1    40.533520
+2    38.986207
+3    38.251163
+Name: WorkHours, dtype: float64
+Optimization terminated successfully.
+         Current function value: 0.976543
+         Iterations 5
+                          MNLogit Regression Results
+==============================================================================
+Dep. Variable:              happiness   No. Observations:                 1298
+Model:                        MNLogit   Df Residuals:                     1294
+Method:                           MLE   Df Model:                            2
+Date:                Sun, 03 Nov 2024   Pseudo R-squ.:                0.001867
+Time:                        14:44:48   Log-Likelihood:                -1267.6
+converged:                       True   LL-Null:                       -1269.9
+Covariance Type:            nonrobust   LLR p-value:                   0.09339
+===============================================================================
+happiness=2       coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+Intercept       1.0499      0.205      5.127      0.000       0.649       1.451
+WorkHours      -0.0087      0.005     -1.783      0.075      -0.018       0.001
+-------------------------------------------------------------------------------
+happiness=3       coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+Intercept      -0.0089      0.267     -0.033      0.973      -0.532       0.514
+WorkHours      -0.0127      0.006     -1.970      0.049      -0.025   -6.65e-05
+===============================================================================
+
+
+
