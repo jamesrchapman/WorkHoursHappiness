@@ -1,0 +1,7 @@
+# Ignore all .dat and .json files
+*.dat
+*.json
+
+# Optionally, ignore specific folders (uncomment if needed)
+# /data/*.dat
+# /configs/*.json
